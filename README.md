@@ -37,17 +37,22 @@ This software requires several files which should be included in your downloaded
                               PMID:23075845 (PubMed identifier)
 
     _barleyGO.B2G.go          derived from the MIPS file above and 4513.annot from 
-                              http://www.b2gfar.org/showspecies?species=4513, made with 
-                              $ perl _format_barley_B2G_annotations.pl > _barleyGO.B2G.go 
+                              http://www.b2gfar.org/showspecies?species=4513 
                               PMID:21335611
 
-    _grassesAthaGOdb.faa.p*   derived from barleyGO.B2G annotated sequences, grasses + A.thaliana in
+    _grassesAthaGOdb.faa.bz2  derived from barleyGO.B2G annotated sequences, grasses + A.thaliana in
                               http://bioinformatics.psb.ugent.be/plaza/ and Aegilops tauschii sequences
                               and annotations retrieved from http://plants.ensembl.org/info/data/ftp/index.html
                               and ftp://ftp.gramene.org/pub/gramene/CURRENT_RELEASE/data/ontology/go
-                              made with $ perl _format_blast_GO_db.pl > _blast_GO_db.faa and then 
-                              $ bin/makeblastdb -in _blast_GO_db.faa -dbtype prot
                               PMIDs:21335611,20040540,24163254,24217918
+
+In order to index grass sequences the user must perform the following:
+
+    $ cd blastdb
+    $ bunzip2 _grassesAthaGOdb.faa.bz2
+    $ makeblastdb -in _grassesAthaGOdb.faa -dbtype prot
+    $ mv _grassesAthaGOdb.faa.p* ..
+    $ cd ..
 
 ## 3) Examples of use:
 
