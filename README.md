@@ -3,10 +3,10 @@
 barleyGO is a Perl script to annotate barley sequences with Gene Ontology terms
 inferred by homology.
 
-Authors Bruno Contreras Moreira (1,2), Carlos P Cantalapiedra (1), MJ Garc�a-Pereira (1) 
+Authors Bruno Contreras Moreira (1,2), Carlos P Cantalapiedra (1), MJ Garcia-Pereira (1) 
 
-    1. Estación Experimental de Aula Dei-CSIC, Zaragoza, Spain
-    2. Fundación ARAID, Zaragoza, Spain
+    1. Estacion Experimental de Aula Dei-CSIC, Zaragoza, Spain
+    2. Fundacion ARAID, Zaragoza, Spain
 
 
 ## 1) software dependencies
